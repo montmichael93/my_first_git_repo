@@ -1,0 +1,353 @@
+﻿body {
+    font-family: 'Playfair Display', serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    display: none;
+}
+
+.nav1, .nav3, .fa-solid fa-m {
+    flex: 2;
+    padding: 5px;
+}
+
+.nav2 {
+    flex: -1;
+    padding-left: 50px;
+    padding-right: 25px
+}
+
+.fa-solid fa-m {
+    margin-left: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: #999;
+}
+
+h1, h2, h5 {
+    color: #6b6b6b;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+    .aboutUs h1 {
+        font-size: 50px;
+    }
+
+.liminal1, .liminal2, .liminal3 {
+    width: 375px;
+    height: 300px;
+}
+
+.space {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10%;
+}
+
+    .space p {
+        margin-right: 10px;
+        text-align: left;
+    }
+
+    .space h2 {
+        text-align: left;
+    }
+
+.team {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.ourteam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.parent {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.parent1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+    .parent1 img {
+        width: 200px;
+    }
+
+.socialmed {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    flex-wrap: wrap;
+}
+
+.businessinfo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    background-color: #282828;
+    color: #777;
+    margin-top: 5%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #fullscr {
+        display: none;
+    }
+
+    .space {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .spacetext {
+        margin-left: 5%;
+    }
+
+    .liminal1, .liminal2, .liminal3 {
+        width: 375px;
+        margin-bottom: 5%;
+    }
+
+    .spacetext {
+        width: 339px;
+    }
+
+    .hotel {
+        display: flex;
+        text-align: left;
+    }
+
+    .livingRoom {
+        display: flex;
+        text-align: left;
+    }
+
+    .hospital {
+        display: flex;
+    }
+
+    .human1 {
+        grid-area: topleft
+    }
+
+    .human2 {
+        grid-area: topright
+    }
+
+    .human1, human2 {
+        margin-bottom: 5%;
+    }
+
+    .parent1 {
+        display: grid;
+        grid-template-areas: 'topleft topright';
+    }
+
+    .human1, .human2, .human3, .human4 {
+        text-align: center;
+    }
+
+    .nav1, .nav2 {
+        display: none;
+    }
+
+    .nav3 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    button {
+        background: #333;
+        border: 0;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .menu {
+        order: -1;
+        perspective = "800px";
+    }
+
+        .menu ul {
+            max-height: 0;
+            overflow: hidden;
+            transform: rotateX(90);
+            transition: all 0.5s;
+        }
+
+    [aria-controls="menu-list"] {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    [aria-expanded="true"] ~ ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotateX('0')
+    }
+
+    [aria-expanded="true"] .close {
+        display: inline-block;
+    }
+
+    [aria-expanded="false"] .close {
+        display: none;
+    }
+
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+    #fullscr {
+        display: none;
+    }
+
+    .liminal1, .liminal2, .liminal3 {
+        width: 350px;
+    }
+
+    .hotel {
+        grid-area: space1
+    }
+
+    .livingRoom {
+        grid-area: space2
+    }
+
+    .hospital {
+        grid-area: space3
+    }
+
+    .space {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .spacetext h2, .spacetext p {
+        text-align: center;
+    }
+
+    .human1 img, .human2 img, .human3 img, .human4 img {
+        width: 375px;
+    }
+
+    .human1, .human2, .human3, .human4 {
+        text-align: center;
+    }
+
+    .socialmed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .businessinfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .nav1, .nav2 {
+        display: none;
+    }
+
+    .nav3 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    button {
+        background: #333;
+        border: 0;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .menu {
+        order: -1;
+        perspective = "800px";
+    }
+
+        .menu ul {
+            max-height: 0;
+            overflow: hidden;
+            transform: rotateX(90);
+            transition: all 0.5s;
+        }
+
+    [aria-controls="menu-list"] {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    [aria-expanded="true"] ~ ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotateX('0')
+    }
+
+    [aria-expanded="true"] .close {
+        display: inline-block;
+    }
+
+    [aria-expanded="false"] .close {
+        display: none;
+    }
+
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+}
