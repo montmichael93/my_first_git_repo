@@ -38,6 +38,7 @@ h1, h2, h5 {
     color: #6b6b6b;
 }
 
+
 .aboutUs {
     display: flex;
     flex-direction: column;
@@ -126,6 +127,11 @@ h1, h2, h5 {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+
+   ul {
+       list-style: none;
+   }
+
     #fullscr {
         display: none;
     }
@@ -243,6 +249,11 @@ h1, h2, h5 {
 }
 
 @media (min-width: 360px) and (max-width: 767px) {
+
+    ul {
+        list-style: none;
+    }
+  
     #fullscr {
         display: none;
     }
@@ -326,11 +337,13 @@ h1, h2, h5 {
             overflow: hidden;
             transform: rotateX(90);
             transition: all 0.5s;
+            
         }
 
     [aria-controls="menu-list"] {
         display: block;
         margin-bottom: 10px;
+        
     }
 
     [aria-expanded="true"] ~ ul {
